@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  body {
+    @apply bg-radio-dark text-slate-100 font-sans antialiased overflow-x-hidden min-h-screen select-none;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+}
+
+/* Custom Tactical LED glow styles */
+.led-glow-green {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.4), inset 0 0 10px rgba(16, 185, 129, 0.2);
+}
+
+.led-glow-red {
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.6), inset 0 0 15px rgba(239, 68, 68, 0.3);
+}
+
+.led-glow-amber {
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.4), inset 0 0 10px rgba(245, 158, 11, 0.2);
+}
+
+/* Metallic PTT button bevel */
+.ptt-button-surface {
+  background: radial-gradient(circle at 50% 30%, #2b384e 0%, #151d2a 100%);
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 0, 0, 0.7),
+    0 0 0 4px #1c2738,
+    0 0 0 8px #101724,
+    inset 0 2px 4px rgba(255, 255, 255, 0.15),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.ptt-button-surface:active,
+.ptt-button-active {
+  background: radial-gradient(circle at 50% 50%, #dc2626 0%, #991b1b 100%);
+  box-shadow: 
+    0 4px 15px rgba(220, 38, 38, 0.6),
+    0 0 0 4px #ef4444,
+    0 0 0 8px #101724,
+    0 0 40px rgba(239, 68, 68, 0.5),
+    inset 0 2px 6px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.8);
+  transform: scale(0.98);
+}
+
+.ptt-button-busy {
+  background: radial-gradient(circle at 50% 30%, #26211f 0%, #171412 100%);
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 0, 0, 0.7),
+    0 0 0 4px #2e2621,
+    0 0 0 8px #101724,
+    inset 0 1px 2px rgba(245, 158, 11, 0.1);
+}
